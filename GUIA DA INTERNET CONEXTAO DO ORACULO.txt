@@ -1,0 +1,7 @@
+cd C:\Users\jimmy\Downloads\oraculo-smt
+git init
+git add .
+git commit -m "Versão inicial do Oráculo SMT"
+git branch -M main
+git remote add origin https://github.com/jimmyhendrixgideao-commits/oraculo-smt.git
+git push -u origin main

@@ -1,0 +1,8 @@
+cd C:\Users\jimmy\Downloads\oraculo-smt
+rmdir /s /q .git
+git init
+git branch -M main
+git remote add origin https://github.com/jimmyhendrixgideao-commits/oraculo-smt.git
+git add .
+git commit -m "Oraculo SMT v2.0 - Cyberpunk + 7 inteligencias"
+git push --force origin main

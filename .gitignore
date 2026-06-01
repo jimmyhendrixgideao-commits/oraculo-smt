@@ -1,0 +1,11 @@
+node_modules/
+data/
+uploads/
+paginas/
+*.log
+.env
+.DS_Store
+Thumbs.db
+!seed-manuals/
+!seed-manuals/**
+!seed-experiences.json

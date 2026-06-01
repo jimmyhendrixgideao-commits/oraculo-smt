@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: oraculo-smt
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLAUDE_API_KEY
+        sync: false

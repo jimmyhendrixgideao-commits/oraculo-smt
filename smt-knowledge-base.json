@@ -1,0 +1,82 @@
+{
+  "_info": "Base de Conhecimento SMT — ORÁCULO SMT by Jimmy Hendrix Queiroz",
+  "_version": "1.0",
+
+  "error_codes": {
+    "fuji": [
+      {"code":"E0001","desc":"Board Stop Sensor Error","cause":"Sensor de parada da placa obstruído ou defeituoso","solution":"1.Limpar sensor 2.Verificar fiação 3.Substituir sensor","level":1},
+      {"code":"E0002","desc":"Board Clamp Error","cause":"Falha no grampo da placa (clamp não fecha/abre)","solution":"1.Verificar cilindro pneumático 2.Ajustar pressão 3.Limpar guias","level":2},
+      {"code":"E0010","desc":"Head Z-Axis Error","cause":"Erro no eixo Z do cabeçote — motor ou encoder","solution":"1.Reiniciar máquina 2.Verificar encoder 3.Calibrar eixo Z 4.Trocar servo motor","level":3},
+      {"code":"E0020","desc":"Nozzle Vacuum Error","cause":"Sem vácuo no bocal (nozzle) durante pick","solution":"1.Limpar bocal 2.Verificar filtro de vácuo 3.Trocar bocal 4.Verificar bomba de vácuo","level":1},
+      {"code":"E0030","desc":"Vision Recognition Error","cause":"Sistema de visão não reconhece componente ou fiducial","solution":"1.Limpar câmera 2.Verificar iluminação 3.Recalibrar visão 4.Verificar dados do componente","level":2},
+      {"code":"E0040","desc":"Feeder Error","cause":"Alimentador não avança fita ou não detecta componente","solution":"1.Recarregar fita 2.Limpar mecanismo 3.Verificar sensor do feeder 4.Trocar feeder","level":1},
+      {"code":"E0050","desc":"Transport Error","cause":"Erro no transporte da placa (conveyor)","solution":"1.Verificar sensor de entrada/saída 2.Limpar esteira 3.Ajustar largura 4.Verificar motor","level":1},
+      {"code":"E0060","desc":"Mark Recognition Error","cause":"Fiducial mark não encontrada na placa","solution":"1.Limpar placa 2.Verificar posição do fiducial 3.Ajustar parâmetros de reconhecimento 4.Recalibrar câmera","level":2},
+      {"code":"E0070","desc":"MT Origin Error","cause":"Motor Table não encontra posição de origem","solution":"1.Reiniciar 2.Verificar sensor de home 3.Limpar trilho 4.Verificar encoder do MT","level":2},
+      {"code":"E0080","desc":"Paste Error","cause":"Erro na aplicação de pasta de solda","solution":"1.Verificar squeegee 2.Ajustar pressão 3.Trocar pasta 4.Limpar stencil","level":2},
+      {"code":"E0100","desc":"Temperature Error","cause":"Temperatura fora da faixa no reflow","solution":"1.Verificar perfil 2.Calibrar termopares 3.Verificar resistências 4.Contatar fabricante","level":3}
+    ],
+    "generic": [
+      {"code":"EMERGENCY","desc":"Emergency Stop","cause":"Botão de emergência pressionado","solution":"1.Verificar segurança 2.Soltar botão 3.Reset no painel","level":1},
+      {"code":"AIR_PRESSURE","desc":"Air Pressure Low","cause":"Pressão pneumática abaixo do mínimo","solution":"1.Verificar compressor 2.Verificar regulador (0.5-0.6 MPa) 3.Verificar vazamentos","level":1},
+      {"code":"SERVO_ALARM","desc":"Servo Motor Alarm","cause":"Alarme no servo motor (sobrecarga, encoder, driver)","solution":"1.Reset alarm 2.Verificar carga mecânica 3.Verificar encoder 4.Trocar driver","level":3},
+      {"code":"OVERTEMP","desc":"Over Temperature","cause":"Temperatura excessiva em componente ou zona","solution":"1.Verificar ventilação 2.Reduzir velocidade 3.Verificar cooler/fan 4.Manutenção preventiva","level":2}
+    ]
+  },
+
+  "procedures": {
+    "calibration": [
+      {"name":"MT Reset (Motor Table Reset)","machine":"Fuji NXT/NXTII","steps":["1.Menu → Maintenance → Machine Calibration","2.Selecionar MT Reset","3.Garantir que não há placas na máquina","4.Clicar Start — aguardar conclusão (3-5 min)","5.Verificar se todos os eixos passaram (OK)","6.Se falhar, verificar sensores de home"],"time":"5-10 min","level":2},
+      {"name":"Vision Calibration","machine":"Geral P&P","steps":["1.Limpar câmera com pano seco","2.Colocar placa de calibração (glass standard)","3.Menu → Calibration → Vision","4.Seguir wizard automático","5.Verificar offset X/Y/θ estão dentro da tolerância (±0.02mm)","6.Salvar calibração"],"time":"15-30 min","level":2},
+      {"name":"Nozzle Height Teaching","machine":"Geral P&P","steps":["1.Menu → Teaching → Nozzle Height","2.Selecionar bocal a calibrar","3.Usar JIG de altura ou sensor de toque","4.Ajustar até toque suave na superfície","5.Registrar valor Z","6.Repetir para todos os bocais"],"time":"10-20 min","level":2},
+      {"name":"Feeder Position Teaching","machine":"Geral P&P","steps":["1.Instalar feeder na posição desejada","2.Menu → Teaching → Feeder","3.Selecionar slot do feeder","4.Ajustar posição X/Y de pick","5.Fazer pick de teste — verificar centralização","6.Salvar posição"],"time":"5-10 min por feeder","level":2},
+      {"name":"Conveyor Width Calibration","machine":"Geral","steps":["1.Medir largura da PCB com paquímetro","2.Menu → Setup → Conveyor","3.Inserir largura + margem (ex: PCB 100mm → conveyor 101mm)","4.Ajustar mecanicamente se necessário","5.Testar passagem de placa","6.Verificar alinhamento"],"time":"5 min","level":1},
+      {"name":"Stencil Printer Calibration","machine":"DEK/MPM","steps":["1.Limpar stencil completamente","2.Menu → Calibration → Print","3.Alinhar fiducials do stencil com a placa","4.Ajustar pressão do squeegee (tipicamente 5-12 kg)","5.Ajustar velocidade (20-80 mm/s)","6.Imprimir teste e medir deposição","7.Ajustar gap e snap-off se necessário"],"time":"20-40 min","level":2}
+    ],
+    "maintenance": [
+      {"name":"Manutenção Diária P&P","machine":"Geral P&P","tasks":["Limpar bocais com álcool isopropílico","Verificar filtros de vácuo","Limpar câmeras de visão","Verificar nível de lubrificante","Esvaziar lixeira de componentes rejeitados","Verificar pressão pneumática (0.5-0.6 MPa)"],"frequency":"Diária"},
+      {"name":"Manutenção Semanal P&P","machine":"Geral P&P","tasks":["Lubrificar trilhos e guias lineares","Verificar condição dos bocais (desgaste)","Limpar sensores de transporte","Verificar tensão das correias","Backup de programas e dados","Calibração rápida de visão"],"frequency":"Semanal"},
+      {"name":"Manutenção Mensal P&P","machine":"Geral P&P","tasks":["Calibração completa de todos os eixos","Trocar filtros de vácuo","Verificar folga nos rolamentos","Lubrificação completa (graxa/óleo)","Verificar conexões elétricas","Limpeza geral interna"],"frequency":"Mensal"},
+      {"name":"Manutenção Reflow","machine":"Forno Reflow","tasks":["Limpar resíduos de fluxo das zonas","Verificar termopares (desvio máx ±2°C)","Calibrar perfil com profiler","Verificar correia transportadora","Limpar filtros de exaustão","Verificar resistências (medir resistência)"],"frequency":"Semanal"},
+      {"name":"Manutenção Printer","machine":"Impressora de Pasta","tasks":["Limpar stencil (ultrasom se possível)","Verificar squeegee (desgaste/corte)","Limpar sistema de limpeza automática","Verificar alinhamento câmera/fiducial","Trocar papel de limpeza","Verificar nível de pasta de solda"],"frequency":"Diária/Semanal"}
+    ]
+  },
+
+  "troubleshooting": {
+    "tombstone": {"symptom":"Componente em pé (tombstone/drawbridge)","causes":[{"cause":"Deposição desigual de pasta","prob":40,"fix":"Verificar stencil, ajustar pressão squeegee"},{"cause":"Pad desigual no PCB","prob":20,"fix":"Revisar gerber/design"},{"cause":"Perfil de reflow inadequado","prob":25,"fix":"Ajustar rampa e pico do perfil"},{"cause":"Componente mal posicionado","prob":15,"fix":"Verificar offset de placement, recalibrar"}]},
+    "solder_bridge": {"symptom":"Ponte de solda entre pads","causes":[{"cause":"Excesso de pasta de solda","prob":45,"fix":"Reduzir pressão squeegee, verificar abertura do stencil"},{"cause":"Stencil sujo/obstruído","prob":25,"fix":"Limpar stencil, verificar aberturas"},{"cause":"Misalignment placement","prob":20,"fix":"Recalibrar visão e offset"},{"cause":"Perfil de reflow","prob":10,"fix":"Ajustar pré-aquecimento e pico"}]},
+    "cold_solder": {"symptom":"Solda fria / junta fosca","causes":[{"cause":"Temperatura insuficiente","prob":50,"fix":"Aumentar pico do perfil (mín 230°C para lead-free)"},{"cause":"Tempo insuficiente acima liquidus","prob":30,"fix":"Aumentar TAL (Time Above Liquidus) para 40-90s"},{"cause":"Pasta de solda vencida/contaminada","prob":15,"fix":"Trocar pasta, verificar validade e armazenamento"},{"cause":"Oxidação dos pads","prob":5,"fix":"Verificar acabamento superficial da PCB"}]},
+    "missing_component": {"symptom":"Componente ausente após placement","causes":[{"cause":"Falha no pick (vácuo)","prob":35,"fix":"Limpar/trocar bocal, verificar vácuo"},{"cause":"Feeder vazio ou travado","prob":25,"fix":"Recarregar/substituir feeder"},{"cause":"Componente tombou no transporte","prob":20,"fix":"Verificar velocidade de placement"},{"cause":"Reject pela visão","prob":20,"fix":"Ajustar parâmetros de reconhecimento"}]},
+    "offset_placement": {"symptom":"Componente fora de posição (offset)","causes":[{"cause":"Calibração de visão desatualizada","prob":40,"fix":"Recalibrar câmera e fiducial recognition"},{"cause":"Bocal sujo ou desgastado","prob":25,"fix":"Limpar ou trocar bocal"},{"cause":"Dados de componente incorretos","prob":20,"fix":"Verificar dimensões no banco de dados"},{"cause":"Expansão térmica da placa","prob":15,"fix":"Verificar suporte e fixação da PCB"}]}
+  },
+
+  "specifications": {
+    "solder_paste": {"temp_storage":"0-10°C","shelf_life":"6 meses","working_life":"8-12 horas após abertura","stencil_life":"4-8 horas no stencil","print_speed":"20-80 mm/s","squeegee_pressure":"5-12 kg","snap_off":"0-1.5 mm"},
+    "reflow_leadfree": {"preheat_rate":"1-3°C/s","soak_temp":"150-200°C","soak_time":"60-120s","peak_temp":"230-250°C","TAL":"40-90s","cooling_rate":"max 4°C/s"},
+    "reflow_leaded": {"preheat_rate":"1-3°C/s","soak_temp":"140-170°C","soak_time":"60-120s","peak_temp":"210-230°C","TAL":"30-60s","cooling_rate":"max 4°C/s"},
+    "vacuum": {"pick_pressure":"-45 a -60 kPa","place_blow":"0.1-0.3 MPa","supply_pressure":"0.5-0.6 MPa"},
+    "placement_accuracy": {"chip_0402":"±0.05mm","chip_0603":"±0.08mm","QFP":"±0.05mm","BGA":"±0.04mm","fine_pitch":"±0.03mm"}
+  },
+
+  "glossary": {
+    "P&P":"Pick and Place — máquina de inserção automática de componentes SMD",
+    "SMT":"Surface Mount Technology — tecnologia de montagem em superfície",
+    "SMD":"Surface Mount Device — componente de montagem em superfície",
+    "THT":"Through Hole Technology — componente com furo passante",
+    "Reflow":"Processo de soldagem por fusão da pasta de solda em forno",
+    "Stencil":"Chapa metálica com aberturas para deposição de pasta de solda",
+    "Squeegee":"Lâmina que espalha a pasta de solda sobre o stencil",
+    "Fiducial":"Marca de referência na PCB para alinhamento",
+    "BGA":"Ball Grid Array — componente com esferas de solda na base",
+    "QFP":"Quad Flat Package — componente com terminais nos 4 lados",
+    "AOI":"Automated Optical Inspection — inspeção óptica automática",
+    "SPI":"Solder Paste Inspection — inspeção de pasta de solda",
+    "Tombstone":"Defeito onde componente fica em pé durante reflow",
+    "Solder Bridge":"Curto-circuito por excesso de solda entre pads adjacentes",
+    "TAL":"Time Above Liquidus — tempo acima da temperatura de fusão da solda",
+    "Nozzle":"Bocal de vácuo usado para pegar componentes",
+    "Feeder":"Alimentador de componentes na máquina P&P",
+    "Teaching":"Processo de ensinar posições à máquina manualmente",
+    "Offset":"Desvio de posição em relação ao ideal"
+  }
+}

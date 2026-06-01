@@ -1,0 +1,13 @@
+{
+  "_comentario": "Este é o arquivo modelo de experiências para serem importadas automaticamente no servidor.",
+  "_instrucoes": "Substitua o conteúdo de 'experiences' pelas suas experiências reais. Cada item precisa de: title, machine, problem, solution, author.",
+  "experiences": [
+    {
+      "title": "Exemplo: Componente não fixa após pick",
+      "machine": "Pick & Place Fuji NXT II",
+      "problem": "Componentes 0402 não fixam corretamente na placa após o pick, gerando placement offset.",
+      "solution": "Verificar pressão de vácuo do bocal (deve estar entre -45 e -55 kPa). Limpar filtro de vácuo. Trocar bocal se houver desgaste visível na ponta. Recalibrar altura Z do cabeçote através do Teaching mode.",
+      "author": "Jimmy"
+    }
+  ]
+}

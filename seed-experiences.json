@@ -1,0 +1,340 @@
+{
+  "experiences": [
+    {
+      "title": "COMPONENTE DESLOCADO",
+      "machine": "NXT 3",
+      "problem": "EXCESSO DE DEFEITOS DE COMPONENTES DESLOCADOS EM X",
+      "solution": "CORREÇÃO DE OFFSET DE IMPRESSÃO DA PASTA DE SOLDA",
+      "author": "JIMMY",
+      "createdAt": "2026-05-04T11:53:25.621Z"
+    },
+    {
+      "title": "COMPONENTE TOMBSTONE",
+      "machine": "NXT 1",
+      "problem": "COMPONENTE CHEGANDO EM TOMBSTONE APOS O FORNO.",
+      "solution": "CORREÇÃO DE OFFSET DE MONTAGEM NO PROGRAMA. ( ESTAVA INCORRETO )",
+      "author": "JIMMY",
+      "createdAt": "2026-05-04T11:54:30.353Z"
+    },
+    {
+      "title": "COMPONENTE FALTANDO",
+      "machine": "NXT 2",
+      "problem": "COMPONENTE FALTANDO MONTAGEM NA PLACA.",
+      "solution": "TROCA DE NOZZLE ENTUPIDO NO SEU PROPRIO BICO.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-04T11:55:42.577Z"
+    },
+    {
+      "title": "ERRO DE TRANSPORTE",
+      "machine": "NXT 1",
+      "problem": "ERRO DE TRANFERENCIA DE UM MODULO PARA O OUTRO.",
+      "solution": "TROCA DA FIBRA DE ENTRADA DO MODULO, DO LADO FIXO.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-04T11:56:47.349Z"
+    },
+    {
+      "title": "Componente rejeitando",
+      "machine": "NXT",
+      "problem": "COMPONENTE REJEITANDO APOS O PICKUP",
+      "solution": "LIMPEZA DA CAMERA FIXA, ONDE HAVIA RESIDUOS E CORPOS ESTRANHOS QUE DIFICULTAVAM O RECONHECIMENTO.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-06T14:23:08.264Z"
+    },
+    {
+      "title": "COMPONENTE REJEITANDO",
+      "machine": "NXT",
+      "problem": "DURANTE O PICKUP DO COMPONENTE, O NOZZLE NÃO CONSEGUIA ALCANÇAR A SUPERFICIE DO MATERIAL.",
+      "solution": "FOI DETECTANDO QUE A FITA TAPE QUE PROTEGE O MATERIAL NÃO HAVIA SIDO RETIRADA, ENTAO FOI RETIRADO A FITA SUPERIOR DO TAPE.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-06T14:25:29.759Z"
+    },
+    {
+      "title": "ERRO DE PICKUP",
+      "machine": "NXT",
+      "problem": "O NOZZLE NÃO CONSEGUE RETIRAR O COMPONENTE DO CASULO OU TAPE.",
+      "solution": "TROCA DO MATERIAL QUE ESTAVA COM O CASULO INTERNO MUITO JUSTO OU APERTADO, DIFICULTANDO O TRABALHO DO NOZZLES.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-06T14:27:21.887Z"
+    },
+    {
+      "title": "ERRO DE RECONHECIMENTO",
+      "machine": "NXT",
+      "problem": "MATERIAL REJEITANDO APOS O PICKUP NO FEEDER.",
+      "solution": "REAJUSTADO O VISION TYPE QUE ESTAVA FORA DAS RECOMENDAÇÕES DA FABRICA.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-06T14:28:19.364Z"
+    },
+    {
+      "title": "COMPONENTE REITANDO",
+      "machine": "NXT",
+      "problem": "MATERIAL SENDO REJEITADO PELO EQUIPAMENTO POS O PICKUP NA EMBALAGEM.",
+      "solution": "AJUSTE NA TOLERANCIA DE RECONHE CIMENTO DO CORPO DO CHIP 0603, QUE ESTAVA FORA DO PADRAO FUJI",
+      "author": "JIMMY",
+      "createdAt": "2026-05-06T14:32:07.373Z"
+    },
+    {
+      "title": "ERRO 8000D701",
+      "machine": "NXT",
+      "problem": "Unable to find a part.\nDetails\tUnable to find a part.",
+      "solution": "TROCA DO FEEDER, POIS A ALTURA DE PICKUP ESTAVA DESCALIBRADA",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T11:40:33.790Z"
+    },
+    {
+      "title": "8000D701",
+      "machine": "NXT",
+      "problem": "Unable to find a part.\nDetails\tUnable to find a part.",
+      "solution": "TROCA DE FEEDER, POIS O ENFITAMENTO DO COMPONENTE NÁO ESTA SENDO PUXADO CORRETAMENTE",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T11:41:22.643Z"
+    },
+    {
+      "title": "8000D721",
+      "machine": "NXT",
+      "problem": "Part body size Y tolerance error.\nDetails\t[Vision processing(4)] Part body size Y tolerance error.\nIf the Y-axis body tolerance is set to '0' in the part data, the default setting is used.\nThe default value is calculated as shown below.\n▪For Vision Type 10, 60 and 66\nIf [Shape Information]-[Body]-[Length] is less than 0.5 mm or greater or equal to 1.5 mm: 20% of [Length]\nIf [Shape Information]-[Body]-[Width] is greater or equal to 0.5 mm and less than 1.5 mm: 25% of [Width]\n▪For vision types other than the above: 30% of [Length]",
+      "solution": "CORREÇÃO DO TAMANHO DO CORPO DO COMPONENTE, QUE ERA UM SIMILAR DO ORIGINAL.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T11:54:32.425Z"
+    },
+    {
+      "title": "80003410",
+      "machine": "NXT",
+      "problem": "Parts are being picked shifted in the Q-direction above the tolerance specified in part data for the part.\nDetails\t[Part information] This error occurs when the vision processing result for the Q-direction offset is larger than the tolerance angle specified in the part data.\nThe pickup conditions may be poor or vision processing may be incorrect.\nAs well, if the vision processing result is correct when the part angle is 90 degrees or 180 degrees, distinction is not possible at first glance.\n( Additional Sequence number))\nRemedy\t1. Exchange the feeder or nozzle to improve the pick up conditions.\n2. If there is no feeder or nozzle problem, clean the parts camera glass.\n3. If the pickup tolerance X specified in part data is too small, make it larger.Then, transmit the job again.",
+      "solution": "TROCA DO FEEDER, QUE ESTAVA DESCALIBRADO.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T14:04:33.975Z"
+    },
+    {
+      "title": "8000340F",
+      "machine": "NXT",
+      "problem": "The part has been picked up with misalignment in the Y-direction that is greater than the tolerance level specified in part data.\nDetails\tThis error is output when the results of vision processing show that Y-direction misalignment is greater than or equal to the tolerance level specified in part data.\nIt is possible that pickup was poor, or that there was a misrecognition during vision processing. (Additional: Sequence number)\nRemedy\t1. Remove any potential pickup problems by changing the feeder and replacing the nozzle.\n2. If there are no problems with the feeder or the nozzle, clean the glass on the parts camera.\n3. Increase the Y-direction tolerance in part data if the setting is unnecessarily small, and then retransmit the job to the machine.",
+      "solution": "TROCA DO FEEDER DESCALIBRADO EM \"Y\"",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T14:07:41.663Z"
+    },
+    {
+      "title": "8000340E",
+      "machine": "NXT",
+      "problem": "The part has been picked up with misalignment in the X-direction that is greater than the tolerance level specified in part data.\nDetails\tThis error is output when the results of vision processing show that X-direction misalignment is greater than or equal to the tolerance level specified in part data. The part may not have been correctly positioned for pick-up, or the positioning may have been judged incorrectly by the vision processing system.\n( Additional )\nRemedy\tRemove any potential pick-up problems by changing the feeder and replacing the nozzle. If there are no problems with the feeder or the nozzle, clean the glass on the parts camera. Increase the X-direction tolerance in part data if the setting is unnecessarily small, and then retransmit the job to the machine.",
+      "solution": "TROCA DO FEEDER DESCALIRBADO EM \"X\"",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T14:17:22.759Z"
+    },
+    {
+      "title": "8000190C",
+      "machine": "NXT",
+      "problem": "Mechanical valve origin error\nDetails\tAt pick-up or placement, a check is made to see if the mechanical valve movement was carried out before the Z-axis was lowered. The mechanical valve origin sensor was found to be ON, indicating the valve may not be ready. Pin name: LEVER RETURN CHECK SENSOR (ORIGIN) PIN NUMBER: 0x09\n( Supplementary Code: Last 4 columns: Head 1=1, Head 2=2)\n( Additional )\nRemedy\tThe mechanical valve which controls the nozzle vacuum is not ready. 1. Check if the mechanical valve is out of order.",
+      "solution": "TROCA DA MECANICA VALVULA EMPENADA OU SUJA.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-21T14:21:40.903Z"
+    },
+    {
+      "title": "ERRO 80008404",
+      "machine": "NXT",
+      "problem": "IPS installation adjustment error\nDetails\tThe nozzle image captured by the IPS camera is not within the permissible range. (Additional: Sub error code XXXXYYYY\nFor IPS2\nYYYY image area 2 error: 0001\nXXXX image area 3 error: 0001 )",
+      "solution": "1. The error may be cleared by restarting after clearing the error.\n2. Use the manual mode head exchange command and remove the head and then clean the fluorescent label and glass for the camera on the head. (Refer to the image)\n3. Adjust the IPS camera position. (Contact your Fuji representative.)",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:06:31.135Z"
+    },
+    {
+      "title": "ERRO 80008405",
+      "machine": "NXT",
+      "problem": "Nozzle is broken or stuck\nDetails\tA nozzle may be broken or stuck. (Additional: Sub error code XXXXYYYY\nYYYYY: 0x0001 to 0x000C (holder A to L)\nFor IPS2(a)\nYYYY image area 2: 0x0001 to 0x0018 (holder A to X)\nXXXX image area 3: 0x0001 to 0x0018 (holder A to X))\n\nAIMEXR:\nA nozzle may be broken or stuck. (Additional: Sub error code XXXXYYYY\nYYYYY: 0x01 to 0x1C (holder A to AB))",
+      "solution": "Check the status of the nozzle.\nIf the nozzle is broken or stuck, use the manual mode nozzle exchange command and exchange the nozzle with another nozzle.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:09:05.352Z"
+    },
+    {
+      "title": "ERRO 80008403",
+      "machine": "NXT",
+      "problem": "IPS image brightness adjustment failed\nDetails\tIPS attempted image brightness adjustment and failed.\nThe following are the possible causes for this error.\n1. The fluorescent label may be dirty.\n2. There may be a problem with the IPS unit. (Additional)\n\nNXTR:\nIPS attempted image brightness adjustment and failed. (Additional)",
+      "solution": "1. If the IPS LEDs, prism, or fluorescent sticker are dirty, clean them.\n2. Perform IPS brightness adjustment.\n3. If the problem is not resolved by the above, acquire an IPS image right after adjusting the brightness and the trace data for the machine under the conditions in which the error occurs, and then contact your Fuji representative.\n\nNXTR:\nClean the prism glass surface and background plate of the IPS.\nEnsure that the IPS background plate is properly attached.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:10:20.077Z"
+    },
+    {
+      "title": "ERRO 80004008",
+      "machine": "NXT",
+      "problem": "The quantity of part numbers registered for an AVL exceeds the maximum number possible to register.\nDetails\tEleven or more part numbers are registered for one AVL.\nThe maximum is 10. (Additional)\n\nAIMEXR:\nThe maximum quantity of part numbers that can be registered for one AVL is 15. (Additional)\n\nNXTR:\nThe maximum quantity of part numbers that can be registered for one AVL is 15. (Additional)",
+      "solution": "Change the AVL data so there are 10 or less part numbers registered for each AVL data.\n\nAIMEXR:\nChange the AVL data so there are 15 or less part numbers registered for each AVL data.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:11:08.168Z"
+    },
+    {
+      "title": "ERRO 80000607",
+      "machine": "NXT",
+      "problem": "Camera registration processing error\nDetails\tThis error is issued if the system fails to register cameras when the machine is booted up.\nThe camera unit may be damaged, or the camera unit and module CPU cannot communicate. (Additional: The vision system error code is displayed)\n\nAIMEXR:\nCamera registration failed when starting up. (Additional)",
+      "solution": "Check the communication port connection. If this does not correct the problem, check the following and replace if necessary.\n　- Head\n　- Mark camera\n　- IEEE1394 cable (between camera and CPU)\n　- Module CPU\n　\n\nAIMEXR:\nCheck the communication port connection and that the connected camera is supported by the installed application.\nIf this does not correct the problem, inspect the camera unit, and replace it if necessary.\n\nNXTR:\nChange the quantity of part numbers registered for one AVL to 15 or less.",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:11:44.418Z"
+    },
+    {
+      "title": "ERRO 8000060C",
+      "machine": "NXT",
+      "problem": "Mark camera compatibility error\nDetails\tA check of the mark camera compatibility found that the saved data and mark camera data do not match. (If installation is done without creating a backup file, this error will occur once after starting. In this case, this error should be ignored.)\n( Additional )",
+      "solution": "Clear and remeasure the calibration data using the [Remeasure Calibration Data] command in Accessory Software",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:12:24.519Z"
+    },
+    {
+      "title": "ERRO D771",
+      "machine": "NXT",
+      "problem": "[BAD DIRECTION]  Direction check error or reverse side determined.　\n\n↑ 　Check whether the tool is holding the part.\nThe polarity detection mark setting for the part and the detection result are mismatched",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check whether the tool is holding the part.\n-Check the part supply direction.\n \n1.Check that the presence flag setting*, inspection area, and brightness threshold\n(CCD level) are appropriate.\n* Is Bottom Mark Present\n \n  　\n\n  PinCheck : Is Bottom Mark Present /\n\n                 UpperLeftX,Y / LowerRightX,Y /\n\n                 CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:13:26.241Z"
+    },
+    {
+      "title": "ERO D727",
+      "machine": "NXT",
+      "problem": "[DIFFER FROM DEVDAT] (Non leaded part) The part is incorrect.　\n\n↑ 　Check whether the tool is holding the part.\nThere are large differences between the data in the settings and the image data",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n \n1.Check the part size.\n2.Check whether an inappropriate value has been entered for [Lead Brightness].\n(Editor only) The body color setting is \"white\"\n \n  　\n\n1.Body : Length / Width / Color\n\n2.LeadBrightness",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:13:59.525Z"
+    },
+    {
+      "title": "ERRO D722",
+      "machine": "NXT",
+      "problem": "[BODY OUTLINE NOT FOUND] (Non leaded part) Unable to acquire the body outline.　\n\n↑ 　Check whether the tool is holding the part.\nThe outer shape of the part could not be detected.,",
+      "solution": "Workaround&gt;＞\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n \n1.Check the part size.\n2.Specify the lead brightness.\n  &gt; Specify a brightness for determining the white section of the terminals or body.\n3.Adjust the exposure time\n  &gt; Make the average brightness of the terminals or body a value of 100 or more.\n \n  　\n\n1.Body : Length / Width\n\n2.LeadBrightness\n\n3.ExposureTime / LightingPattern",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:14:31.592Z"
+    },
+    {
+      "title": "ERRO D721",
+      "machine": "NXT",
+      "problem": "[BODY Y TOL]  (non leaded part) Part body size Y tolerance error.　\n\n↑ 　Check whether the tool is holding the part.\nBody size Y is outside the range for body size Y, taking the tolerance into account.",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n \n1.Check the value specified for body size Y.\n2.Change the body size Y tolerance.\n \n 　\n\n1.Body : Width\n\n2.Body : Width Tolerance",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:15:11.359Z"
+    },
+    {
+      "title": "ERRO D720",
+      "machine": "NXT",
+      "problem": "[BODY X TOL]  (non leaded part) Part body size X tolerance error.　\n\n↑ 　Check whether the tool is holding the part.\nBody size X is outside the range for body size X, taking the tolerance into account.",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n \n1.Check the value specified for body size X.\n2.Change the body size X tolerance.\n \n 　\n\n1.Body : Length\n\n2.Body : Length Tolerance",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:15:42.807Z"
+    },
+    {
+      "title": "ERRO D730",
+      "machine": "NXT",
+      "problem": "[CPL OUTLINE NOT FOUND]  (Rough position) Unable to acquire the part outline.　\n\n↑ 　Check whether the tool is holding the part.\nThe detected white-lit sections do not match at all with the defined lead information.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check the part size.\n2.Check each value for the defined leads.\n3.Check whether an inappropriate value has been entered for [Lead Brightness].\n\n \n\n 　\n\n1.Body : Length / Width\n\n2.Element : Width / Length / Position\n\n3.LeadBrightness",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:16:27.647Z"
+    },
+    {
+      "title": "ERRO D741",
+      "machine": "NXT",
+      "problem": "[LEAD WIDTH]  (Lead measurement) Lead width tolerance error.　\n\n↑ 　Check whether the tool is holding the part.\nThe lead width is outside the tolerance range.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined leads.\n2.Change the lead width tolerance.\n\n \n\n  　\n\n1.Element : Width\n\n2.Element : Width Tolerance",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:17:01.585Z"
+    },
+    {
+      "title": "ERRO D744",
+      "machine": "NXT",
+      "problem": "[LEAD CENTER]  (Lead measurement) Lead center tolerance error.　\n\n↑ 　Check whether the tool is holding the part.\nThe lead position is outside the tolerance range.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined leads.\n2.Change the lead position tolerance.\n\n \n\n 　\n\n1.Element : Position / Pitch\n\n2.Element : Center Tolerance",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:17:30.012Z"
+    },
+    {
+      "title": "ERRO D747",
+      "machine": "NXT",
+      "problem": "[NO ELEMENT] (Lead measurement) An element could not be located.　\n\n↑ 　Check whether the tool is holding the part.\nThe defined leads cannot be found at all.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined leads.\n2.Check whether an inappropriate value has been entered for [Lead Brightness].\n3.Check for very small, excess leads that were not expected to be detected, and for leads that have been defined in duplicate. \n\n \n\n 　\n\n1.Element : Width / Length / Position\n\n2.LeadBrightness\n\n3.Number of Elements",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:17:57.992Z"
+    },
+    {
+      "title": "ERRO D749",
+      "machine": "NXT",
+      "problem": "[LEAD NUM]  (lead measurement) The amount of detected leads are less that the amount specified.　\n\n↑ 　Check whether the tool is holding the part.\nThe defined leads cannot be found at all.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check the part size.\n2.Check each value for the defined leads.\n3.Check whether an inappropriate value has been entered for [Lead Brightness].\n  &gt; Specify a value that can be used to diffrentiate the leads and other sections.\n\n \n\n  　\n\n1.Body : Length / Width\n\n2.Element : Width / Length / Position\n\n3.LeadBrightness",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:18:29.188Z"
+    },
+    {
+      "title": "ERRO D775",
+      "machine": "NXT",
+      "problem": "[NO MARKS]  Unable to find part polarity detection mark.　\n\n↑ 　Check whether the tool is holding the part.\nThe part polarity check marks for each angle cannot be detected regardless of which angle it is.",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check whether the tool is holding the part.\n-Check the part supply direction.\n\n  \n\n1.Check whether the presence flag setting*, inspection area settings, and brightness threshold (CCD level) settings are appropriate.\n\n     * Is Bottom Mark Present\n \n  　\n\n  PinCheck : Is Bottom Mark Present /\n\n                 UpperLeftX,Y / LowerRightX,Y /\n\n                 CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:19:00.182Z"
+    },
+    {
+      "title": "ERRO D776",
+      "machine": "NXT",
+      "problem": "[TOO MANY MARKS]  Multiple part polarity detection marks found.　\n\n↑ 　Check whether the tool is holding the part.\nThe part polarity check marks for each angle are detected at multiple angles",
+      "solution": "Workaround&gt;\n  \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check whether the tool is holding the part.\n-Check the part supply direction.\n\n  \n\n1.Check whether the presence flag setting*, inspection area settings, and brightness threshold (CCD level) settings are appropriate.\n\n  * Is Bottom Mark Present\n \n  　\n\n  PinCheck : Is Bottom Mark Present /\n\n                 UpperLeftX,Y / LowerRightX,Y /\n\n                 CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:19:30.233Z"
+    },
+    {
+      "title": "ERRO D730",
+      "machine": "NXT",
+      "problem": "[CPL OUTLINE NOT FOUND] (Rough position) Unable to acquire the part outline.\n\n↑ Click on a similar image to see the workaround.\nIt is not possible to determine the part outline from the outermost bumps",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined bumps.\n2.Check whether an inappropriate value has been entered for [Lead Brightness].\n3.Change the vision type to 142 and perform tests .\n\n \n\nAdditional information\n  This vision type is recommended for the outermost bumps on grid array parts without any missing bumps that are 7 x 7 or more.\n  If these part conditions are not met, using vision type 142 is recommended.\n\n \n\n　\n\n1.Element : Width / Length / Position\n\n2.LeadBrightness\n\n3.VisionType",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:20:02.010Z"
+    },
+    {
+      "title": "ERRO D731",
+      "machine": "NXT",
+      "problem": "[CPL TOO FEW OBJECTS] (Rough position) Not enough blobs present.\n\n↑ Click on a similar image to see the workaround.\n The quantity of white-lit sections either exceeds or does not meet the defined quantity.",
+      "solution": "Workaround&gt;\n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check the part size.\n2.Check each value for the defined leads.\n3.Check whether an inappropriate value has been entered for [Lead Brightness] .\n\n \n\nAdditional information\n  This occurs when each lead cannot be separated out to individual white sections.\n\n \n\n　\n\n1.Body : Length / Width\n2.Element : Width / Length / Position\n3.LeadBrightness",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:20:35.483Z"
+    },
+    {
+      "title": "ERRO D732",
+      "machine": "NXT",
+      "problem": "[CPL TOO FEW OBJECTS 2] (Rough position) Not enough blobs present after size check.\n\n↑ 　Click on a similar image to see the workaround.\nThere is an excess or deficit in the quantity of bumps detected after the bump size check.",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined bumps.\n2.Check whether an inappropriate value has been entered for [Lead Brightness].\n3.Change the exposure time, and check the difference between the imaged bump size and the defined value.\n  &gt; If this cannot be rectified in the imaging conditions, specify a larger value for the bump tolerance.\n\n \n\nAdditional information\n  If this occurs when \"0\" (auto) is specified for [Lead Brightness], specify an optimal value.\n  When a value has already been set, review the setting.\n\n \n\n 　\n\n1.Element : Length / Width / Position\n\n2.LeadBrightness\n\n3.ExposureTime / LightingPattern",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:21:07.895Z"
+    },
+    {
+      "title": "ERRO D750",
+      "machine": "NXT",
+      "problem": "[BUMP NUM] (Bump measurement) The amount of detected bumps is less that the amount specified.\n\n↑  Fewer than the defined quantity of bumps were detected.\nFewer than the defined quantity of bumps were detected.",
+      "solution": "Workaround&gt;\n \n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n\n \n\n1.Check each value for the defined bumps.\n2.Check whether an inappropriate value has been entered for [Lead Brightness].\n3.Change the exposure time, and check that the imaging of the bumps is adequate.\n\n \n\nAdditional information\n  If stable processing cannot be attained,\n  it is possible to lower the bump detection rate to a level that does not cause quality issues.\n  (Quantity Check Limit)）\n\n \n\n  　\n\n1.Element : Length / Width / Position\n\n2.LeadBrightness\n\n3.ExposureTime / LightingPattern",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:21:35.753Z"
+    },
+    {
+      "title": "ERRO D770",
+      "machine": "NXT",
+      "problem": "[BAD WINDOW] Pin check error\n\n↑ 　Click on a similar image to see the workaround.\nThe specified window size for part polarity check marks is too small.",
+      "solution": "Workaround&gt;\n \n\n1.Specify a window size of 0.2 mm or more for the Bottom Mark Check.\n\n \n\n 　\n\n  PinCheck : UpperLeftX,Y / LowerRightX,Y",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:22:09.641Z"
+    },
+    {
+      "title": "ERRO D772",
+      "machine": "NXT",
+      "problem": "[BUMP EXIST] Part supply direction incorrect.\n\n↑ 　Click on a similar image to see the workaround.\nA bump was detected when it is specified that there is no bump",
+      "solution": "Workaround&gt;\n \n\n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check the part supply direction.\n\n \n\n1.Check whether the presence flag setting* and inspection area settings are appropriate.\n* Is Bump Presentt\n\n  　\n\n  PinCheck : Is Bump Present /\n\n                UpperLeftX,Y / LowerRightX,Y /\n\n                CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:22:38.415Z"
+    },
+    {
+      "title": "ERRO D773",
+      "machine": "NXT",
+      "problem": "[NO BUMP] Part supply direction incorrect\n\n↑ Click on a similar image to see the workaround.\nA bump was not detected when it is specified that there is a bump",
+      "solution": "Workaround&gt;\n \n\n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check the part supply direction.\n\n \n\n1.Check whether the presence flag setting* and inspection area settings are appropriate.\n* Is Bump Present\n \n\n  　\n\n  PinCheck : Is Bump Present /\n\n                UpperLeftX,Y / LowerRightX,Y /\n\n                CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:23:06.830Z"
+    },
+    {
+      "title": "ERRO D774",
+      "machine": "NXT",
+      "problem": "[BUMP SIZE]  Part supply direction incorrect\n\n↑ 　Click on a similar image to see the workaround.\nA bump was not detected or the size was different when it is specified that there is a bump",
+      "solution": "Workaround&gt;\n \n\n-Check whether the part is correct.\n-Check for elements that have been read other than the part.\n-Check whether the part has any defects.\n-Check the part supply direction.\n\n \n\n1.Check whether the presence flag setting* and inspection area settings are appropriate.\n* Is Bump Present\n \n\n  　\n\n  PinCheck : Is Bump Present /\n\n                UpperLeftX,Y / LowerRightX,Y /\n\n                CCD Level",
+      "author": "JIMMY",
+      "createdAt": "2026-05-31T21:23:37.713Z"
+    }
+  ]
+}
